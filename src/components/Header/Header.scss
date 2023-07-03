@@ -1,0 +1,45 @@
+.header {
+  background: linear-gradient(360deg, #464341 0%, #010101 100%);
+  padding: 0 262px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    width: 213px;
+    height: 36px;
+  }
+
+  &__tel {
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 1600px) {
+  .header {
+    padding: 0 120px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .header {
+    padding: 0 60px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .header {
+    height: 60px;
+    padding: 0 20px;
+    &__logo {
+      width: 118px;
+      height: 20px;
+    }
+  }
+}
