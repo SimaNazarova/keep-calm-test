@@ -78,6 +78,7 @@
 
 .articles:first-of-type {
   margin-top: 292px;
+  margin-bottom: 70px;
 }
 
 @media all and (max-width: 1600px) {
@@ -180,7 +181,4 @@
   .articles:first-of-type {
     margin-top: 128px;
   }
-}
-.articles:first-of-type {
-  margin-bottom: 160px;
 }
