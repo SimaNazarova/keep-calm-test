@@ -1,5 +1,4 @@
 .gallery {
-
   &__title {
     color: #141414;
     font-size: 48px;
@@ -28,10 +27,37 @@
     width: 320px;
     height: 488px;
     overflow: hidden;
-    opacity: 1;
   }
 
   &__img {
     object-fit: cover;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gallery {
+    &__title {
+      font-size: 24px;
+      font-family: "Orchidea Pro", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      text-transform: uppercase;
+      padding-left: 0;
+    }
+    &__group {
+      overflow: scroll;
+      gap: 28px;
+      padding-left: 10px;
+    }
+
+    &__item {
+      width: 255px;
+      height: 344px;
+    }
+    &__img {
+      object-fit: contain;
+      inline-size: 100%;
+    }
   }
 }

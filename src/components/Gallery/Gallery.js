@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import "./Gallery.scss";
@@ -6,6 +6,8 @@ import { imgArray } from "./data";
 gsap.registerPlugin(ScrollTrigger);
 
 function Gallery() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const photoRefs = useRef([]);
   const galleryRef = useRef();
   photoRefs.current = [];
@@ -16,19 +18,26 @@ function Gallery() {
   };
 
   useEffect(() => {
-    gsap.to(photoRefs.current, {
-      xPercent: -85 * (photoRefs.current.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: galleryRef.current,
-        pin: true,
-        scrub: 1,
-        end: "+=3000",
-        start: "top center-=400",
-        //toggleActions: "play none none none",
-        //markers: true,
-      },
-    });
+    window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth > 500) {
+      gsap.to(photoRefs.current, {
+        xPercent: -85 * (photoRefs.current.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: galleryRef.current,
+          pin: true,
+          scrub: 1,
+          end: "+=3000",
+          start: "top center-=400",
+          //markers: true,
+        },
+      });
+    } else {
+      return;
+    }
   }, []);
   return (
     <section className="gallery" ref={galleryRef}>
