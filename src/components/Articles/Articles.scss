@@ -41,9 +41,9 @@
     margin-top: 67px;
   }
 
-  // &__grid-article:last-of-type &__grid-title {
-  //   margin-top: 24px;
-  // }
+  &__grid-article:last-of-type &__grid-title {
+    margin-top: 24px;
+  }
 
   &__grid-img {
     object-fit: cover;
@@ -76,9 +76,17 @@
   }
 }
 
-// .articles:first-of-type {
-//   margin-top: 292px;
-// }
+.articles:first-of-type {
+  margin-top: 292px;
+}
+
+@media all and (max-width: 1600px) {
+  .articles {
+    &__title {
+      padding-left: 120px;
+    }
+  }
+}
 @media all and (max-width: 1350px) {
   .articles {
     &__title {
@@ -168,4 +176,7 @@
   .articles:first-of-type {
     margin-top: 128px;
   }
+}
+.articles:first-of-type {
+  margin-bottom: 160px;
 }
