@@ -87,6 +87,9 @@
       padding-left: 120px;
     }
   }
+  .articles:first-of-type {
+    margin-top: 250px;
+  }
 }
 @media all and (max-width: 1350px) {
   .articles {
