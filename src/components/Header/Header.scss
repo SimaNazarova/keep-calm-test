@@ -1,4 +1,8 @@
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
   background: linear-gradient(360deg, #464341 0%, #010101 100%);
   padding: 0 262px;
   height: 100px;

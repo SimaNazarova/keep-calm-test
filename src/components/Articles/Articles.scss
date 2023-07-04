@@ -1,7 +1,7 @@
 .articles {
   max-width: 1588px;
-  margin-top: 191px;
-  margin-bottom: 160px;
+  margin-top: 160px;
+  // margin-bottom: 160px;
   display: flex;
   flex-direction: column;
   &__title {
@@ -11,10 +11,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
-    align-self: center;
     text-transform: uppercase;
-    white-space: pre-line;
     margin: 0;
+    padding-left: 262px;
+    white-space: pre-line;
   }
 
   &__grid {
@@ -38,11 +38,12 @@
     font-weight: 500;
     line-height: 110%;
     margin: 0;
+    margin-top: 67px;
   }
 
-  &__grid-article:last-of-type &__grid-title {
-    margin-top: 24px;
-  }
+  // &__grid-article:last-of-type &__grid-title {
+  //   margin-top: 24px;
+  // }
 
   &__grid-img {
     object-fit: cover;
@@ -75,6 +76,9 @@
   }
 }
 
+// .articles:first-of-type {
+//   margin-top: 292px;
+// }
 @media all and (max-width: 1350px) {
   .articles {
     &__title {
@@ -89,8 +93,12 @@
     }
 
     &__grid-illustration {
-      height: 360px;
+      height: 370px;
+      &_second {
+        height: 360px;
+      }
     }
+
     &__grid-title {
       font-size: 24px;
     }
@@ -101,7 +109,7 @@
   }
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 800px) {
   .articles {
     margin-top: 72px;
 
@@ -137,11 +145,13 @@
 
 @media all and (max-width: 500px) {
   .articles {
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
     &__grid {
       row-gap: 0;
     }
-
+    &__grid-title {
+      margin-top: 0;
+    }
     &__grid-illustration {
       &_second {
         margin-top: 59px;
@@ -150,8 +160,12 @@
 
     &__grid-article {
       margin: auto;
-      margin-top: 41px;
+      margin-top: 34px;
       padding: 0 20px;
     }
+  }
+
+  .articles:first-of-type {
+    margin-top: 128px;
   }
 }

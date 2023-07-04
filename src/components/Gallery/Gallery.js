@@ -7,7 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Gallery() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const desktopTitle = `Lorem ipsum dolor sit amet`;
+  const mobileTitle = `Lorem ipsum\n dolor sit amet`;
   const photoRefs = useRef([]);
   const galleryRef = useRef();
   photoRefs.current = [];
@@ -30,8 +31,7 @@ function Gallery() {
           trigger: galleryRef.current,
           pin: true,
           scrub: 1,
-          end: "+=3000",
-          start: "top center-=400",
+          start: "top center-=290",
           //markers: true,
         },
       });
@@ -41,7 +41,9 @@ function Gallery() {
   }, []);
   return (
     <section className="gallery" ref={galleryRef}>
-      <h2 className="gallery__title">Lorem ipsum dolor sit amet</h2>
+      <h2 className="gallery__title">
+        {windowWidth > 750 ? desktopTitle : mobileTitle}
+      </h2>
       <ul className="gallery__group">
         {imgArray.map((item, i) => (
           <li key={i} className="gallery__item" ref={addToRefs}>
