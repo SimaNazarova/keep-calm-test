@@ -30,7 +30,7 @@ function Articles({ array }) {
           <p className="articles__grid-text">{array.text2}</p>
         </div>
 
-        <div className="articles__grid-illustration articles__grid-img_second">
+        <div className="articles__grid-illustration articles__grid-illustration_second">
           <img
             className="articles__grid-img"
             src={array.img2}

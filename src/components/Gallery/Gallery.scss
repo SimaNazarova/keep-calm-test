@@ -1,0 +1,37 @@
+.gallery {
+
+  &__title {
+    color: #141414;
+    font-size: 48px;
+    font-family: "Orchidea Pro", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    align-self: center;
+    text-transform: uppercase;
+    white-space: pre-line;
+    padding-left: 264px;
+  }
+
+  &__group {
+    display: grid;
+    gap: 40px;
+    grid-auto-flow: column;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 123px;
+    padding-left: 277px;
+  }
+
+  &__item {
+    list-style-type: none;
+    width: 320px;
+    height: 488px;
+    overflow: hidden;
+    opacity: 1;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+}

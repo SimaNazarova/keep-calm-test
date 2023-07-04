@@ -46,11 +46,8 @@
 
   &__grid-img {
     object-fit: cover;
-    width: 100%;
+    inline-size: 100%;
     height: auto;
-    &_second {
-      grid-area: 2 / -2;
-    }
   }
 
   &__grid-text {
@@ -72,6 +69,9 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    &_second {
+      grid-area: 2 / -2;
+    }
   }
 }
 
@@ -119,6 +119,9 @@
 
     &__grid-img {
       object-fit: cover;
+    }
+
+    &__grid-illustration {
       &_second {
         grid-area: auto;
       }
@@ -139,7 +142,7 @@
       row-gap: 0;
     }
 
-    &__grid-img {
+    &__grid-illustration {
       &_second {
         margin-top: 59px;
       }
