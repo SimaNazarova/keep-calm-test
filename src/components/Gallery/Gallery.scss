@@ -35,6 +35,18 @@
     object-fit: cover;
   }
 }
+
+@media all and (max-width: 1600px) {
+  .gallery {
+    &__title {
+      padding-left: 120px;
+    }
+    &__group {
+      gap: 30px;
+      padding-left: 120px;
+    }
+  }
+}
 @media all and (max-width: 1350px) {
   .gallery {
     &__title {
@@ -43,7 +55,6 @@
 
     &__group {
       padding-left: 30px;
-      padding-right: 100px;
       gap: 28px;
     }
     &__item {
