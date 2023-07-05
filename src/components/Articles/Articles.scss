@@ -1,7 +1,6 @@
 .articles {
   max-width: 1588px;
   margin-top: 160px;
-  // margin-bottom: 160px;
   display: flex;
   flex-direction: column;
   &__title {
@@ -158,7 +157,6 @@
 
 @media all and (max-width: 500px) {
   .articles {
-    // margin-bottom: 80px;
     &__grid {
       row-gap: 0;
     }
